@@ -36,4 +36,11 @@ function delay(time, isSucess) {
 const p2 = delay(2000, false)
 	.then((data) => console.log(data))
 	.catch((err) => console.error(err));
-// delay(2000).then(() => console.log('동기적으로 실행할 코드💕'));
+
+/*
+Promise를 통해 동기화 처리하는 방법
+1. 비동기가 발생하는 (setTimeout)구문을 new Promise의 생성자 함수 콜백으로 전달
+2. Promise 생성자 콜백 안에서 동기적으로 호출하고 싶은 시점에 첫번째 인수로 전달되는 res() / rej()메서드를 호출시킴
+3. 해당 Promise 생성자는 인스턴스 객체를 반환하고 
+4. 해당 인스턴스 객체의 .then메서드나 .catch메서드로 동기화 시킬 코드 호출 가능
+*/
