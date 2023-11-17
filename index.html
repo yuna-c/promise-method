@@ -1,16 +1,58 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8">
-  <meta name='viewport' content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script defer src="js/common.js"></script>
   <title>Document</title>
-  <link rel="stylesheet" href="css/common.css">
-  <script src="js/common.js"></script>
+  <style>
+    main {
+      width: 400px;
+    }
+
+    .pic>img {
+      width: 100%;
+    }
+  </style>
 </head>
 
 <body>
+  <main>
+    <!-- 
+    <article>
+      <div class="pic"><img></div>
+      <h2>사람이름</h2>
+      <p>직첵</p>
+    </article> 
+    -->
+  </main>
 
+  <!-- 
+  <script>
+    const main = document.querySelector('main');
+
+    fetch('member.json')
+      .then(data => data.json())
+      .catch(err => console.log(err))
+      .then(json => {
+        console.log(json.members);
+        let tags = '';
+
+        json.members.forEach((data) => {
+          console.log(data.name);
+          tags += `
+          <article>
+            <div class="pic"><img src=${data.pic} /></div>
+            <h2>${data.name}</h2>
+            <p>${data.position}</p>
+          </article> 
+          `
+        });
+        main.innerHTML = tags;
+      });
+  </script>
+-->
 </body>
 
 </html>

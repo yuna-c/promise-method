@@ -1,13 +1,13 @@
 {
-  "menbers": [
+  "members": [
     {
       "name": "Emily",
-      "position": "president",
+      "position": "President",
       "pic": "img/member1.jpg"
     },
     {
-      "name": "Micheal",
-      "position": "vice President",
+      "name": "Michael",
+      "position": "Vice President",
       "pic": "img/member2.jpg"
     },
     {
