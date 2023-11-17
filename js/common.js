@@ -11,19 +11,8 @@ fetch 자체가 반환된 데이터를 promise로 감싸서 리턴해줌
 fetch('data.json').then((파라미터) =>{인자}).catch((에러)=>{인자})
 body (비동기 데이터 위치) : Json형태로 변환시키기 전(parsing)까지 확인이 안돼용~
 */
-fetch('member.json')
-	.then((data) => {
-		// 데이터가 성공적으로 반환시 동기적으로 실행되는 구문
-		console.log(data);
-		// 문자열로 변환되어 있는 데이터를 읽을 수 있는 객체 형태로 parsing처리(Promise형태로 자동 반환)
-		// parsing작업에도 시간이 걸리기 때문에 promise로 반환되고 then으로 받아서 내부적으로 확인할 수 있음
-		// data.json().then((json) => console.log(json));
-		return data.json();
-	})
-	.catch((err) => {
-		// 데이터 반환에 실패시 동기적으로 실행되는 예외구문
-		console.log(err);
-	})
-	.then((json) => {
-		console.log(json);
-	});
+
+fetch('member.json') // 데이터 요청 후 동기적으로 반환
+	.then((data) => data.json()) // 반환된 데이터를 다시 json()으로 parsing해서 다시 동기적으로 반환
+	.catch((err) => console.log(err)) // 데이터 반환에 실패시 해당 구문 호출되고 종료
+	.then((json) => console.log(json)); // 첫번째 then구문에서 내부 json parsing이 성공하면 동기적으로 호출
