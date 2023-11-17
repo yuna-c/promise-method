@@ -6,6 +6,8 @@ function test(delay, callback) {
 }
 
 // -start => 2초 후 test1 => 또 2초 후 test => end
+// ES5에서 callback을 통해 동기화 하는 원리
+// 애초에 동기화시키고 싶은코드를 모두 callback형태로 묶어 통채로 web api에게 넘김으로써 callstack입장에서 ㄷ음에 실행할 코드들을 원천적으로 제거하는 방법
 
 // 순서 1 - start출력(callstack)
 console.log('start');
