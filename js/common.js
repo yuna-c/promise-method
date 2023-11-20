@@ -21,7 +21,6 @@ fetch('member.json')
 // 함수분리
 function createDom(arr) {
 	let tags = '';
-
 	arr.forEach((data) => {
 		tags += `
     <article>
@@ -55,3 +54,5 @@ function createDom(arr) {
       main.innerHTML = tags;
     });
 */
+
+// promise.all(), promise.race(), asyn await
